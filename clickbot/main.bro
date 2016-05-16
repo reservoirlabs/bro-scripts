@@ -31,7 +31,7 @@
 ##! rather, it is very likely that a click will happen
 ##! on a different connection from that of the query that
 ##! originated it.  This means that we need to search 
-##! query-clicks in a agreggated manner, with two implications:
+##! query-clicks in an agreggated manner, with three implications:
 ##!
 ##! (1) for a given click, it could be that we have several
 ##!     potential queries it came from.  We adopt by default
