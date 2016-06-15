@@ -48,7 +48,7 @@ export {
     type Info: record {
         epoch_time: time &log;              ##< Time at the end of the epoch 
         top_list: vector of string &log;    ##< Ordered list of top elements 
-        top_counts: vector of string &log;  ##< Counters for each element 
+        top_counts: vector of count &log;  ##< Counters for each element 
     };
 
     # Logging event for tracking the top URLs 
