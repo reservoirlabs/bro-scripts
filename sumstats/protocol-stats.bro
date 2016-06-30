@@ -81,7 +81,7 @@ export {
 
     ## Protocols that get logged
     type Info: record {
-        start_time: string &log;
+        start_time: time &log;
         ARP: double &log;
         AYIYA: double &log;
         BackDoor: double &log;
@@ -199,7 +199,7 @@ function generate_protocol_stats(ts: time, direction: string)
 
 
     # Log one entry 
-    rec = [$start_time= strftime("%c", ts - epoch ), 
+    rec = [$start_time = ts - epoch, 
            $ARP=tracked_protocol_values["arp"],
            $AYIYA=tracked_protocol_values["ayiya"],
            $BackDoor=tracked_protocol_values["backdoor"],
