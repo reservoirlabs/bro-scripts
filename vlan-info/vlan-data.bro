@@ -1,11 +1,29 @@
-##! Information about vlans, mapping vlan-id to the expected ip address range and location information
-
-# Loaded from the end of vlan-location.bro
+##! Information about VLANs, mapping VLAN ID to the expected IP Address range and location information
 
 # Reservoir Labs Inc. 2017 All Rights Reserved.
-# vlan data 
 
-module Conn;
+module VLANLocation;
+
+export {
+
+    ## Location/IP subnet information corresponding to each VLAN
+    type vlandata: record {
+        ## Human readable description for the VLAN
+        description: string &log;
+
+        ## Expected IPv4 subnet information if available.
+        ipv4net: subnet &log &optional;
+
+        ## Expected IPv6 subnet information if available
+        ipv6net: subnet &log &optional;
+
+        ## Location information for the VLAN if applicable eg Building East, First Floor etc
+        location: string &log &optional;
+    };
+
+    global vlanlist: table[int] of vlandata = table() &redef;
+
+}
 
 # This must be customized to each environment
 redef vlanlist += {

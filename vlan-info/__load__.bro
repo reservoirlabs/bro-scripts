@@ -1,8 +1,8 @@
-##! This module provides mapping between VLAN id and the physical location where available
+##! This module provides a mapping between VLAN IDs and the physical location where available
 
 # Reservoir Labs Inc. 2017 All Rights Reserved.
-# Periodically verfies if all configured taps are generating data
-# Update vlan-data.bro with information about VLANs
+
+# Periodically verifies if all configured taps are generating data
 
 @load ./vlan-location
 @load ./tap-verify
