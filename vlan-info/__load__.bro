@@ -1,4 +1,4 @@
-##! Geolocate network activity and verify tapping points
+##! This module provides a mapping between VLAN IDs and the physical location where available
 
 # Reservoir Labs Inc. 2017 All Rights Reserved.
 
